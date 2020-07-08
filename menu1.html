@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        PROFILE
+    </title>
+    <link rel="stylesheet" type = 'text/css' href = 'basic.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src = "https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        var myprofile = {
+            Name : 'SongYunGeun',
+            Age : '24',
+            School : 'Myongji University',
+            Major : 'Information and Communication',
+            Like : 'Animals (Best is Cats)'
+        }
+        var output = '';
+        var i;
+        $(document).ready(function(){
+            $('<h1></h1>').html('@ Profile @').appendTo('profile');
+            $('profile').css('color','#0404B4');
+            $('profile').css('font-size','30px');
+            for(i in myprofile){
+                output += '&nbsp - '+ i + ": "+myprofile[i] + '<br>';
+            }
+            $('<text></text>').html(output).appendTo('profile');
+            $('text').css('color','black');
+
+        })
+
+
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="top">
+        <br><h1>
+            <a href="index.html">
+                <img src = 'home.JPG' width = "40" height="40">
+            </a>
+            What A Lovely Cat</h1>
+    </div>
+
+    <div id="now_title"><br><div id = "titletext">
+        <h2>&nbsp;&nbsp;&nbsp;홈페이지 만든이</h2></div></div>
+    <div id="left"><br>
+        <h3>
+            [MENU]
+        </h3>
+        <br>
+        <div>
+            <a href="menu1.html">
+                Profile
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu2.html">
+                Cat Breed
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu3.html">
+                Parcel Out
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu4.html">
+                Quiz
+            </a>
+        </div>
+    </div>
+
+    <div id="main">
+        <profile>
+
+        </profile>
+        <br>
+        <h2>
+        <a href="index.html">
+            <img src = 'home.JPG' width = "40" height="40">
+        </a>메인으로 돌아가기</h2>
+    </div>
+
+</div>
+
+</body>
+
+</html>

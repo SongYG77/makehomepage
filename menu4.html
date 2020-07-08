@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        QUIZ
+    </title>
+    <link rel="stylesheet" type = 'text/css' href = 'basic.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        text {
+          color : dodgerblue;
+        }
+    </style>
+    <script src = "https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            var score = 0;
+            document.getElementById('start').onclick=function() {
+                $('quiz').empty()
+                var countdown = 10;
+                var correct = 'a';
+                var i;
+                $('<text></text>').html('다음 사진은 어떤 고양이 일까요?<br><br>').appendTo('quiz');
+                $('<img src = "breed2.jpg" width = "300" height =  "300">').appendTo('quiz')
+                var output = '<br>';
+                var output2 = '&nbsp ';
+                output += '<select name = "quiz1" id = "quiz1">';
+                output += '<option value = "a">페르시안</option>';
+                output += '<option value = "b">스코티쉬 폴드</option>';
+                output += '<option value = "c">먼치킨</option>';
+                output += '<option value = "d">러시안 블루</option>';
+                $('<text></text>').html(output).appendTo('quiz');
+                output2 += '<input type="button" value="정답제출" class = "answ">'
+                $('<but></but>').html(output2).appendTo('quiz');
+                $('.answ').click(function(){
+                    countdown = 0;
+                });
+                var interval = setInterval(function () {
+                    if(countdown == 0)
+                    {
+                        var temp = document.getElementById("quiz1");
+                        var ans = temp.options[temp.selectedIndex].value;
+                        if(ans == correct)
+                        {
+                            alert('정답입니다.')
+                            score+=1;
+                        }
+                        else{
+                            alert('오답입니다.')
+                        }
+                        clearInterval(interval);
+                        quiz2();
+                    }
+                    $('timer').empty();
+                    $('<h1></h1>').html('남은시간 : ' + countdown).appendTo('timer');
+                    countdown -= 1;
+                }, 1000)
+            }
+            function quiz2() {
+                $('quiz').empty()
+                var countdown = 10;
+                var correct = 'b';
+                var i;
+                $('<text></text>').html('다음 사진은 어떤 고양이 일까요?<br><br>').appendTo('quiz');
+                $('<img src = "breed1.jpg" width = "300" height =  "300">').appendTo('quiz')
+                var output = '<br>';
+                var output2 = '&nbsp ';
+                output += '<select name = "quiz2" id = "quiz2">';
+                output += '<option value = "a">페르시안</option>';
+                output += '<option value = "b">스코티쉬 폴드</option>';
+                output += '<option value = "c">먼치킨</option>';
+                output += '<option value = "d">러시안 블루</option>';
+                $('<text></text>').html(output).appendTo('quiz');
+                output2 += '<input type="button" value="정답제출" class = "answ">'
+                $('<but></but>').html(output2).appendTo('quiz');
+                $('.answ').click(function(){
+                    countdown = 0;
+                });
+                var interval = setInterval(function () {
+                    if(countdown == 0)
+                    {
+                        var temp = document.getElementById("quiz2");
+                        var ans = temp.options[temp.selectedIndex].value;
+                        if(ans == correct)
+                        {
+                            alert('정답입니다.')
+                            score+=1;
+                        }
+                        else{
+                            alert('오답입니다.')
+                        }
+                        clearInterval(interval);
+                        quiz3();
+                    }
+                    $('timer').empty();
+                    $('<h1></h1>').html('남은시간 : ' + countdown).appendTo('timer');
+                    countdown -= 1;
+                }, 1000)
+            }
+            function quiz3() {
+                $('quiz').empty()
+                var countdown = 10;
+                var correct = 'd';
+                var i;
+                $('<text></text>').html('다음 사진은 어떤 고양이 일까요?<br><br>').appendTo('quiz');
+                $('<img src = "breed5.jpg" width = "300" height =  "300">').appendTo('quiz')
+                var output = '<br>';
+                var output2 = '&nbsp ';
+                output += '<select name = "quiz3" id = "quiz3">';
+                output += '<option value = "a">페르시안</option>';
+                output += '<option value = "b">스코티쉬 폴드</option>';
+                output += '<option value = "c">먼치킨</option>';
+                output += '<option value = "d">러시안 블루</option>';
+                $('<text></text>').html(output).appendTo('quiz');
+                output2 += '<input type="button" value="정답제출" class = "answ">'
+                $('<but></but>').html(output2).appendTo('quiz');
+                $('.answ').click(function(){
+                    countdown = 0;
+                });
+                var interval = setInterval(function () {
+                    if(countdown == 0)
+                    {
+                        var temp = document.getElementById("quiz3");
+                        var ans = temp.options[temp.selectedIndex].value;
+                        if(ans == correct)
+                        {
+                            alert('정답입니다.')
+                            score+=1;
+                        }
+                        else{
+                            alert('오답입니다.')
+                        }
+                        clearInterval(interval);
+                        final();
+                    }
+                    $('timer').empty();
+                    $('<h1></h1>').html('남은시간 : ' + countdown).appendTo('timer');
+                    countdown -= 1;
+                }, 1000)
+
+            }
+            function final(){
+                $('quiz').empty();
+                $('<h1></h1>').html('귀하는 3문제 중 ').appendTo('quiz');
+                $('<text></text>').html('<h1>'+score + '문제</h1>').appendTo('quiz');
+                $('<h1></h1>').html('를 맞추셧습니다.').appendTo('quiz');
+            }
+        })
+
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="top"><br> <h1>
+        <a href="index.html">
+            <img src = 'home.JPG' width = "40" height="40">
+        </a>
+        What A Lovely Cat</h1></div>
+
+    <div id="now_title"><br><div id = "titletext"><h2> Do you like a cat??</h2></div></div>
+
+    <div id="left"><br>
+        <h3>
+            [MENU]
+        </h3>
+        <br>
+        <div>
+            <a href="menu1.html">
+                Profile
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu2.html">
+                Cat Breed
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu3.html">
+                Parcel Out
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu4.html">
+                Quiz
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <center>
+            <timer>
+                <h1>남은시간</h1>
+            </timer>
+            <quiz>
+            <br><br>
+            <h1><text>고양이에 관련된 내용이 나옵니다.<br>
+            문제는 총 3문제 입니다.<br>
+            주어진 시간은 문제당 10초 입니다.</h1>
+            <br><br><br>
+            </text>
+            <input type = 'button' id="start" value="퀴즈 시작">
+            </quiz>
+        </center>
+    </div>
+</div>
+
+</body>
+
+</html>

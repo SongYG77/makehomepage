@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        CAT BREED
+    </title>
+    <link rel="stylesheet" type = 'text/css' href = 'basic.css'/>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+    <script src = "https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        var explain = [];
+        explain.push('@특징 : 동그란 얼굴과 접힌 귀, @성격 : 순하고 유순하다.');
+        explain.push('@특징 : 얼굴이 둥글고 넓음, @성격 : 얌전하고 게으르다.');
+        explain.push('@특징 : 통통한 볼과 짧은 털, @성격 : 친화력이 좋고 애교가 많다.');
+        explain.push('@특징 : 너무 짧은 다리... , @성격 : 온순하고 사람을 잘 따름');
+        explain.push('@특징 : 은빛을 띈 푸른 털, @성격 : 조용하고 온순하다.');
+        $(document).ready(function(){
+            $('#breed1').on({
+                'click':function(){
+                    $('#mainimg').attr("src",'breed1.jpg');
+                    $('text').empty()
+                    $('<h3></h3>').html(explain[0]).appendTo('text');
+                }
+            })
+            $('#breed2').on({
+                'click':function(){
+                    $('#mainimg').attr("src",'breed2.jpg');
+                    $('text').empty()
+                    $('<h3></h3>').html(explain[1]).appendTo('text');
+                }
+            })
+            $('#breed3').on({
+                'click':function(){
+                    $('#mainimg').attr("src",'breed3.jpg');
+                    $('text').empty()
+                    $('<h3></h3>').html(explain[2]).appendTo('text');
+                }
+            })
+            $('#breed4').on({
+                'click':function(){
+                    $('#mainimg').attr("src",'breed4.jpg');
+                    $('text').empty()
+                    $('<h3></h3>').html(explain[3]).appendTo('text');
+                }
+            })
+            $('#breed5').on({
+                'click':function(){
+                    $('#mainimg').attr("src",'breed5.jpg');
+                    $('text').empty()
+                    $('<h3></h3>').html(explain[4]).appendTo('text');
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div id="box">
+    <div id="top">
+        <br><h1>
+        <a href="index.html">
+            <img src = 'home.JPG' width = "40" height="40">
+        </a>
+        What A Lovely Cat</h1></div>
+
+    <div id="now_title"><br><div id = "titletext">
+        <h2>&nbsp;&nbsp;&nbsp;고양이의 종류와 사진</h2></div></div>
+
+    <div id="left"><br>
+        <h3>
+            [MENU]
+        </h3>
+        <br>
+        <div>
+            <a href="menu1.html">
+                Profile
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu2.html">
+                Cat Breed
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu3.html">
+                Parcel Out
+            </a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <a href="menu4.html">
+                Quiz
+            </a>
+        </div>
+    </div>
+
+    <div id="main">
+
+        <center>
+            <br>
+            &lt 이름을 클릭해 주세요 &gt
+        <table border = '2px' width = '600' height = '60'>
+            <th id = 'breed1'>스코티쉬 폴드</th>
+            <th id = 'breed2'>페르시안</th>
+            <th id = 'breed3'>아메리칸 쇼트헤어</th>
+            <th id = 'breed4'>먼치킨</th>
+            <th id = 'breed5'>러시안 블루</h>
+        </table>
+        <br>
+            <text><h3>특징 설명</h3></text>
+        <br><br>
+        <img id = 'mainimg' width = '500' height = '300'>
+        </center>
+    </div>
+</div>
+
+</body>
+
+</html>

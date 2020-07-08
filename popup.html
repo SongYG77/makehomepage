@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>안녕하세요</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-size: 18px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            font-family: 'Jua', sans-serif;
+        }
+        .backbody::after{
+            width : 490px;
+            height : 280px;
+            content : '';
+            top:0;
+            left: 0;
+            background: url("catfoot.jpg");
+            background-repeat : no-repeat;
+            background-size : cover;
+            position : absolute;
+            z-index: -1;
+            opacity: 0.1;
+
+        }
+    </style>
+    <script>
+        function textcolor1(){
+            document.getElementById('link1').style.color = 'red';
+        }
+        function textcolorback1(){
+            document.getElementById('link1').style.color = 'black';
+        }
+    </script>
+
+</head>
+<body>
+<div class = "backbody">
+
+    <h1>안녕하세요<br></h1>
+    홈페이지를 방문해주셔서 감사합니다.<br>
+    고양이에 관련된 홈페이지 입니다.<br>
+    전체화면을 권장합니다!!<br>
+</div>
+
+</body>
+</html>

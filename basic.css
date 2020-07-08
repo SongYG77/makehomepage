@@ -1,0 +1,72 @@
+﻿@charset "UTF-8";
+body {
+    margin: 0px;
+    font-family: 'Jua', sans-serif;
+}
+#box {
+    position: relative;
+    height: auto;
+    margin: auto;
+    background-color: #F90;
+}
+#top {
+    background-color: #333;
+    height: 110px;
+    position: relative;
+    font-size: 18px;
+    color: #FFF;
+    text-align: center;
+}
+#now_title{
+    background-color: gray;
+    height: 90px;
+    position: relative;
+    font-size: 5px;
+    color: #FFF;
+}
+#left {
+    background-color: #09C;
+    float: left;
+    height: 700px;
+    width: 10%;
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+    border-right-width: 5px;
+    border: #333333;
+}
+#main {
+    background: url("background.jpg");
+    background-repeat : no-repeat;
+    background-size : cover;
+    float: left;
+    height: 700px;
+    width: 90%;
+    position: relative;
+}
+#titletext{
+    position : relative;
+    background-color: gray;
+    font-size: 22px;
+
+}
+a {
+    color : black;
+    text-decoration: none;
+}
+a:link {
+    color:black;
+    text-decoration: none;
+}<!-- 링크 표시 지우기 -->
+a:visited {
+    color:black;
+    text-decoration: none;
+}<!-- 방문 링크 표시 지우기 -->
+a:focus{
+    color:black;
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration: none;
+} <!-- 마우스가 링크 위 -->
